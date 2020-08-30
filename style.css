@@ -1,0 +1,185 @@
+/*-----------------------*/
+/* Template default css
+/*-----------------------*/
+
+html,
+body {
+  height: 100%;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #110d0d;
+  margin: 0;
+  font-weight: 600;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+p {
+  font-size: 18px;
+  color: #110d0d;
+  line-height: 1.8;
+}
+
+.section-title {
+  font-size: 60px;
+}
+
+.section-title span {
+  color: #e1fc49;
+}
+
+/*-----------------------*/
+/* Header section css
+/*-----------------------*/
+
+.header-section {
+  padding-top: 20px;
+  background: #001418;
+}
+
+.main-menu ul li a {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 20px 0 5px;
+}
+
+.site-logo {
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 20px;
+  color: #ffffff;
+}
+
+/*-----------------------*/
+/* Intro section css
+/*-----------------------*/
+
+.intro-section {
+  padding: 100px 0 100px 0;
+  background: #001418;
+}
+
+.cvbtn {
+  border-radius: 50%;
+}
+
+.section-greeting,
+.section-title {
+  color: #ffffff;
+}
+
+/*-----------------------*/
+/* About section css
+/*-----------------------*/
+
+.about-section {
+  padding: 100px 0 100px 0;
+}
+
+.myintro span {
+  color: rgb(247, 175, 68);
+}
+
+/*-----------------------*/
+/* Services section css
+/*-----------------------*/
+
+.services-section {
+  padding: 100px 0 100px 0;
+}
+
+.service img {
+  width: 150px;
+  height: 150px;
+}
+
+/*-----------------------*/
+/* Blog section css
+/*-----------------------*/
+
+.blog-section {
+  padding: 100px 0 100px 0;
+}
+
+/*-----------------------*/
+/* Contact section css
+/*-----------------------*/
+
+.contact-section {
+  padding: 100px 0 100px 0;
+}
+
+/*-----------------------*/
+/* Footer section css
+/*-----------------------*/
+
+.footer-section {
+  padding: 100px 0 100px 0;
+  background: #001418;
+}
+
+.social-links a {
+  margin-right: 30px;
+  color: #ffffff;
+}
+
+.social-links a:last-child {
+  margin-right: 0;
+}
+
+.f-section-title,
+.copyright {
+  color: #ffffff;
+}
+
+/*-----------------------*/
+/* Footer section css
+/*-----------------------*/
+
+.nav-switch {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .body-pad {
+    padding: 0 15px;
+  }
+  .main-menu {
+    position: absolute;
+    background: #efefef;
+    width: 100%;
+    z-index: 999;
+    left: 0;
+    top: 30px;
+    padding-top: 15px;
+    display: none;
+  }
+  .main-menu ul li a {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    display: block;
+  }
+  .main-menu ul li {
+    display: block;
+  }
+  .main-menu ul li:last-child a {
+    border-bottom: none;
+  }
+  .nav-switch {
+    position: absolute;
+    right: 25px;
+    font-size: 30px;
+    color: #333;
+    top: 35px;
+    display: block;
+  }
+}

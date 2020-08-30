@@ -59,6 +59,23 @@ p {
   color: #ffffff;
 }
 
+.burger{
+	display: none;
+}
+
+.burger div {
+	width: 20px;
+	height: 3px;
+	background-color: #ffffff;
+	margin: 5px;
+}
+
+@media screen and (max-width:768px) {
+	body {
+		display: none;
+	}
+}
+
 /*-----------------------*/
 /* Intro section css
 /*-----------------------*/
@@ -139,47 +156,4 @@ p {
 .f-section-title,
 .copyright {
   color: #ffffff;
-}
-
-/*-----------------------*/
-/* Footer section css
-/*-----------------------*/
-
-.nav-switch {
-  display: none;
-}
-
-@media only screen and (max-width: 767px) {
-  .body-pad {
-    padding: 0 15px;
-  }
-  .main-menu {
-    position: absolute;
-    background: #efefef;
-    width: 100%;
-    z-index: 999;
-    left: 0;
-    top: 30px;
-    padding-top: 15px;
-    display: none;
-  }
-  .main-menu ul li a {
-    padding: 10px 15px;
-    border-bottom: 1px solid #ddd;
-    display: block;
-  }
-  .main-menu ul li {
-    display: block;
-  }
-  .main-menu ul li:last-child a {
-    border-bottom: none;
-  }
-  .nav-switch {
-    position: absolute;
-    right: 25px;
-    font-size: 30px;
-    color: #333;
-    top: 35px;
-    display: block;
-  }
 }

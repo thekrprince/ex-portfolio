@@ -174,12 +174,6 @@ p {
 	.main-menu ul li:last-child a {
 	  	border-bottom: none;
 	}
-	.home-2 {
-		text-align: left;
-	}
-	.home-2 .main-menu {
-		top: 99px;
-	}
 	.nav-switch {
 		position: absolute;
 		right: 25px;

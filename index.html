@@ -5,7 +5,7 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>KP - Dev</title>
-	<link rel="icon" href="images/favicon.png">
+	<link rel="icon" href="images/work.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 	<script src="main.js"></script>
@@ -18,18 +18,8 @@
 	<!-- Bootstrap css framework -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
 		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-	<!-- Bootstrap js -->
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-		crossorigin="anonymous"></script>
-	<!--jquery cdn -->
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-		crossorigin="anonymous"></script>
-	<!-- icons -->
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-		crossorigin="anonymous"></script>
+	<!-- Scroll reveal -->
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -40,41 +30,34 @@
 
 	<!-- Header section start -->
 	<header class="header-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-4 col-md-3">
-					<div class="logo">
-						<a href="index.html">
-							<h2 class="site-logo">Prince</h2>
-						</a>
-					</div>
-				</div>
-				<div class="col-lg-8 col-md-9">
-					<nav class="main-menu">
-						<ul class="nav justify-content-end">
-							<li class="nav-item">
-								<a class="nav-link active" href="index.html">Home</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link active" href="#about">About</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link active" href="#services">Services</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link active" href="#blog">Blog</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link active" href="#contact">Contact</a>
-							</li>
-						</ul>
-					</nav>
+		<nav class="navbar navbar-expand-md navbar-dark">
+			<div class="container">
+				<a class="site-logo" href="index.html">KP</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-menu"
+					aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="nav-menu">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#about">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#services">Services</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#blog">Blogs</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#contact">Contact</a>
+						</li>
 				</div>
 			</div>
-		</div>
-		<div class="nav-switch">
-			<i class="fa fa-bars"></i>
-		</div>
+		</nav>
 	</header>
 	<!-- Header section end -->
 
@@ -83,7 +66,7 @@
 		<div class=" container text-center">
 			<div class="row">
 				<div class="col-lg-12">
-					<div class="col-xl-12 offset-xl-l">
+					<div class="col-xl-12 offset-xl-l" data-aos="fade-up">
 						<h3 class="section-greeting">Welcome</h3>
 						<h2 class="section-title">
 							I'm a freelance
@@ -91,9 +74,9 @@
 							this journey
 						</h2>
 					</div>
-					<div class="mt-4 pt-2">
-						<a href="downloads/Resume.pdf" class="btn btn-outline-primary">
-							Download CV
+					<div class="mt-4 pt-5" data-aos="fade-up">
+						<a href="downloads/Resume.pdf" class="resume">
+							DOWNLOAD CV
 						</a>
 					</div>
 				</div>
@@ -106,10 +89,10 @@
 	<section class="about-section bg-light" id="about">
 		<div class=" container">
 			<div class="row">
-				<div class="col-lg-6 col-md-12">
+				<div class="col-lg-6 col-md-12" data-aos="fade-up">
 					<img src="images/myDp.jpeg" class="img-thumbnail" alt="myPic" />
 				</div>
-				<div class="col-lg-6 col-md-12">
+				<div class="col-lg-6 col-md-12" data-aos="fade-up">
 					<h2>About Me</h2>
 					<h4 class="mt-4 myintro">
 						Hello!
@@ -120,9 +103,7 @@
 						years of experience in IT industry.
 					</p>
 					<p class="mt-3">
-						Worked for 1.5 years as QA and then switched to Development as I
-						always had more interest in this field and worked on few projects
-						during my College time.
+						Experienced in HTML, CSS, Javascript, Bootstrap, React, Python, Django etc.
 					</p>
 					<p class="mt-3">
 						This Covid-19 pandemic has impacted all of our lives and for me it
@@ -139,23 +120,23 @@
 	<section class="services-section" id="services">
 		<div class="container text-center">
 			<div class="row">
-				<div class="col">
+				<div class="col" data-aos="fade-up">
 					<h2>Our Services</h2>
-					<p>We design the complete Web Application.</p>
+					<p>We design the complete Product.</p>
 				</div>
 			</div>
-			<div class="row service">
+			<div class="row service" data-aos="fade-up">
 				<div class="col-lg-4 col-md-4">
 					<img src="icon/website-design.png" class="img-thumbnail" alt="Web Design" />
-					<h1>Web Design</h1>
+					<h2>Web Design</h2>
 				</div>
 				<div class="col-lg-4 col-md-4">
 					<img src="icon/web-development.png" class="img-thumbnail" alt="Web Development" />
-					<h1>Web Development</h1>
+					<h2>Web Development</h2>
 				</div>
 				<div class="col-lg-4 col-md-4">
 					<img src="icon/mobile-app.png" class="img-thumbnail" alt="App Development" />
-					<h1>App Development</h1>
+					<h2>App Development</h2>
 				</div>
 			</div>
 		</div>
@@ -166,7 +147,7 @@
 	<section class="blog-section bg-light" id="blog">
 		<div class="container text-center">
 			<div class="row">
-				<div class="col">
+				<div class="col" data-aos="fade-up">
 					<h2>Blogs</h2>
 				</div>
 			</div>
@@ -178,22 +159,22 @@
 	<section class="contact-section" id="contact">
 		<div class="container text-center">
 			<div class="row justify-content-center">
-				<div class="col-lg-12">
+				<div class="col-lg-12" data-aos="fade-up">
 					<h2>Contact Us</h2>
 				</div>
 			</div>
 			<div class="row mt-5">
-				<div class="col-lg-4">
+				<div class="col-lg-4" data-aos="fade-up">
 					<i class="fa fa-mobile fa-3x" aria-hidden="true"></i>
 					<h5 class="mt-2 font-weight-bold">Call Us On</h5>
 					<p class="text-muted">+91-9113661235</p>
 				</div>
-				<div class="col-lg-4">
+				<div class="col-lg-4" data-aos="fade-up">
 					<i class="fa fa-envelope-o fa-3x" aria-hidden="true"></i>
 					<h5 class="mt-2 font-weight-bold">Email Us On</h5>
 					<p class="text-muted">princekr700@gmail.com</p>
 				</div>
-				<div class="col-lg-4">
+				<div class="col-lg-4" data-aos="fade-up">
 					<i class="fa fa-map-marker fa-3x" aria-hidden="true"></i>
 					<h5 class="mt-2 font-weight-bold">Visit Office</h5>
 					<p class="text-muted">
@@ -208,21 +189,46 @@
 	<!-- Footer section start -->
 	<footer class="footer-section text-center">
 		<div class="container">
-			<h1 class="f-section-title mb-5">Let's Work Together</h1>
-			<div class="social-links">
+			<h1 class="f-section-title mb-5" data-aos="fade-up">Let's Work Together</h1>
+			<div class="social-links" data-aos="fade-up">
 				<a href="https://www.linkedin.com/in/kumar-prince-697650b1/" class="fa fa-linkedin" target="_blank"></a>
 				<a href="https://www.instagram.com/kr_prnc/" class="fa fa-instagram" target="_blank"></a>
 				<a href="https://www.facebook.com/kumar.prince.545" class="fa fa-facebook" target="_blank"></a>
 				<a href="https://twitter.com/princekr700" class="fa fa-twitter" target="_blank"></a>
 			</div>
-			<div class="copyright mt-4">
+			<div class="copyright mt-4" data-aos="fade-up">
 				Copyright ©
 				<span class="date">2020</span>
-				<span class="no-wrap">All rights reserved.</span>
+				<span class="no-wrap">All rights reserved </span>|
+				<span class="creator">This website is made with</span>
+				<i class="fa fa-heart" style="color: red;"></i>
+				<span> by Prince</span>
 			</div>
 		</div>
 	</footer>
 	<!-- Footer section end -->
+
+	<!-- Optional Javascript-->
+	<!--jquery cdn -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<!-- Bootstrap js -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+		crossorigin="anonymous"></script>
+	<!-- icons -->
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<!-- AOS -->
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			easing: 'ease-in-out-sine',
+			duration: 1000
+		});
+	</script>
 </body>
 
 </html>

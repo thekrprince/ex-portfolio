@@ -20,6 +20,10 @@ h6 {
   	font-family: "Josefin Sans", sans-serif;
 }
 
+li {
+	list-style: none;
+}
+
 p {
   	font-size: 18px;
   	color: #110d0d;
@@ -34,33 +38,40 @@ p {
   	color: #e1fc49;
 }
 
+/*=== Preloader ===*/
+
+
 /*-----------------------*/
 /* Header section css
 /*-----------------------*/
 
 .header-section {
-  	padding-top: 20px;
-  	background: #001418;
+	padding: 20px 0 5px 0;
+	background: #001418;
+	position: relative;
 }
 
-.main-menu ul li a {
+#nav-menu ul li a {
   	color: #ffffff;
   	font-size: 16px;
   	font-weight: bold;
-  	margin-left: 10px;
-  	margin-right: 10px;
-  	padding: 20px 0 5px;
+	text-decoration: none;  
+}
+
+.nav-item a:hover {
+	color: #ffffff;
 }
 
 .site-logo {
-  	font-size: 20px;
+  	font-size: 30px;
   	font-weight: bold;
-  	padding-top: 20px;
-  	color: #ffffff;
+	color: #ffffff;
+	text-decoration: none;
 }
 
-.nav-switch {
-	display: none;
+.site-logo:hover {
+	text-decoration: none;
+	color: #ffffff;
 }
 
 /*-----------------------*/
@@ -69,11 +80,7 @@ p {
 
 .intro-section {
   	padding: 100px 0 100px 0;
-  	background: #001418;
-}
-
-.cvbtn {
-  	border-radius: 50%;
+	background: #001418;
 }
 
 .section-greeting,
@@ -81,12 +88,26 @@ p {
   	color: #ffffff;
 }
 
+.resume {
+	border-radius: 25px;
+	border: 2px solid #ffffff;
+	padding: 13px;
+	color: #ffffff;
+	font-size: large;
+}
+
+.resume:hover {
+	background: #ffffff;
+	color: #001418;
+	text-decoration: none;
+}
+
 /*-----------------------*/
 /* About section css
 /*-----------------------*/
 
 .about-section {
-  	padding: 100px 0 100px 0;
+	  padding: 100px 0 100px 0;
 }
 
 .myintro span {
@@ -148,38 +169,28 @@ p {
 /*-----------------------*/
 /* Responsive css
 /*-----------------------*/
+@media only screen and (min-width: 768px) and (max-width: 1448px) {
+	.service div:hover {
+		width: auto;
+		height: auto;
+		padding: 15px;
+		box-shadow: 5px 5px 5px 5px grey;
+		transition: 0.8s;
+	}
+}
 
-@media only screen and (max-width: 767px) {
-	.body-pad {
-	  	padding: 0 15px;
+@media only screen and (max-width: 768px) {
+	
+	.nav-item {
+		text-align: center;
 	}
-	.main-menu {
-		position: absolute;
-	  	background: #efefef;
-	  	width: 100%;
-	  	z-index: 999;
-	  	left: 0;
-	  	top: 30px;
-	  	padding-top: 15px;
-	  	display: none;
+	.navbar-nav {
+		background: rgb(80, 89, 90);
 	}
-	.main-menu ul li a {
-	  	padding: 10px 15px;
-	  	border-bottom: 1px solid #ddd;
-	  	display: block;
+	.service div:hover {
+		width: 100%;
+		padding: 10px;
+		box-shadow: 5px 5px 5px 5px grey;
+		transition: 0.8s;
 	}
-	.main-menu ul li {
-	  	display: block;
-	}
-	.main-menu ul li:last-child a {
-	  	border-bottom: none;
-	}
-	.nav-switch {
-		position: absolute;
-		right: 25px;
-		font-size: 20px;
-		color: #ffffff;
-		top: 35px;
-		display: block;
-	 }
 }

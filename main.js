@@ -4,24 +4,28 @@
     version - 1.0
 -------------------------------
 =============================*/
-/*
-"use strict";
 
-(function ($) {
-  /*------------------
-		Navigation
-	--------------------
-  $(".nav-switch").on("click", function (event) {
-    $(".main-menu").slideToggle(400);
-    event.preventDefault();
-  });
+/*------- Preloader --------*/
+window.addEventListener('load', () => {
+  const preloader = document.querySelector("#preloader");
+  preloader.classList.add("preload-finish");
+});
 
-  /*------------------
-		Background set
-	--------------------
-  $(".set-bg").each(function () {
-    var bg = $(this).data("setbg");
-    $(this).css("background-image", "url(" + bg + ")");
+/*------- Nav bar background change when scroll --------*/
+$(window).scroll(function () {
+  $('header').toggleClass('scrolled', $(this).scrollTop() > 50);
+});
+
+$('#nav-menu ul li a').click(function () {
+  $('active').removeClass('active');
+  $(this).addClass('active');
+});
+$(window).scroll(function () {
+  var href = $(this).scrollTop();
+  $('.link').each(function (event) {
+    if (href >= $($(this).attr('href')).offset().top - 1) {
+      $('active').removeClass('active');
+      $(this).addClass('active');
+    }
   });
-})(jquery);
-*/
+});

@@ -8,7 +8,6 @@
 	<link rel="icon" href="images/work.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-	<script src="main.js"></script>
 	<!-- Google fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />
 	<!-- My CSS -->
@@ -31,17 +30,17 @@
 	<!-- Header section start -->
 	<header class="header-section">
 		<nav class="navbar navbar-expand-md navbar-dark">
-			<div class="container">
+			<div class="container" data-aos="fade-down">
 				<a class="site-logo" href="index.html">KP</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-menu"
 					aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
-				<div class="collapse navbar-collapse" id="nav-menu">
+				<div class="collapse navbar-collapse" id="nav-menu" data-aos="fade-down">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item active">
-							<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+							<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#about">About</a>
@@ -63,7 +62,7 @@
 
 	<!-- Intro section start -->
 	<section class="intro-section">
-		<div class=" container text-center">
+		<div class="container text-center">
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="col-xl-12 offset-xl-l" data-aos="fade-up">
@@ -75,7 +74,7 @@
 						</h2>
 					</div>
 					<div class="mt-4 pt-5" data-aos="fade-up">
-						<a href="downloads/Resume.pdf" class="resume">
+						<a href="downloads/Resume.pdf" class="cvbtn">
 							DOWNLOAD CV
 						</a>
 					</div>
@@ -106,9 +105,7 @@
 						Experienced in HTML, CSS, Javascript, Bootstrap, React, Python, Django etc.
 					</p>
 					<p class="mt-3">
-						This Covid-19 pandemic has impacted all of our lives and for me it
-						was a major turning point as i started practicing Web Development
-						again.
+						Building high quality, scalable solutions for the web across a wide range of industries.
 					</p>
 				</div>
 			</div>
@@ -221,6 +218,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
 		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
 		crossorigin="anonymous"></script>
+	<script src="main.js"></script>
 	<!-- AOS -->
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script>

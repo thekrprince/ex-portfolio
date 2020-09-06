@@ -5,7 +5,8 @@
 html,
 body {
   	height: 100%;
-  	font-family: "Josefin Sans", sans-serif;
+	font-family: "Josefin Sans", sans-serif;
+	scroll-behavior: smooth;
 }
 
 h1,
@@ -40,26 +41,95 @@ p {
 
 /*=== Preloader ===*/
 
+#preloader {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999999;
+	background: #ffffff;
+	transition: opacity 0.5s ease;
+}
+
+.loader {
+	width: 40px;
+	height: 40px;
+	border: 4px solid #000;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -13px;
+	margin-left: -13px;
+	border-radius: 50%;
+	border-left-color: transparent;
+	animation: loader 0.8s linear infinite;
+	-webkit-animation: loader 0.8s linear infinite;
+}
+
+.preload-finish {
+	opacity: 0;
+	pointer-events: none;
+}
+
+@keyframes loader {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	50% {
+		-webkit-transform: rotate(180deg);
+		transform: rotate(180deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes loader {
+	0% {
+	  -webkit-transform: rotate(0deg);
+	}
+	50% {
+	  -webkit-transform: rotate(180deg);
+	}
+	100% {
+	  -webkit-transform: rotate(360deg);
+	}
+  }
+
 
 /*-----------------------*/
 /* Header section css
 /*-----------------------*/
 
 .header-section {
-	padding: 20px 0 5px 0;
-	background: #001418;
-	position: relative;
+	position: fixed;
+	padding: 10px 0 5px 0;
+	overflow: hidden;
+	width: 100%;
+	top: 0;
+	z-index: 99999;
+}
+
+.header-section.scrolled {
+	background-color: #000;
 }
 
 #nav-menu ul li a {
   	color: #ffffff;
   	font-size: 16px;
-  	font-weight: bold;
-	text-decoration: none;  
+  	font-weight: 500;
+	z-index: 999;
 }
 
-.nav-item a:hover {
-	color: #ffffff;
+#nav-menu ul li a:hover {
+	color: rgb(230, 103, 87);
+}
+
+.active {
+	color: rgb(118, 204, 48);
 }
 
 .site-logo {
@@ -71,7 +141,7 @@ p {
 
 .site-logo:hover {
 	text-decoration: none;
-	color: #ffffff;
+	color: rgb(230, 103, 87);
 }
 
 /*-----------------------*/
@@ -79,8 +149,10 @@ p {
 /*-----------------------*/
 
 .intro-section {
-  	padding: 100px 0 100px 0;
-	background: #001418;
+	padding: 200px 0 200px 0;
+	background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/bg.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
 
 .section-greeting,
@@ -88,15 +160,15 @@ p {
   	color: #ffffff;
 }
 
-.resume {
+.cvbtn {
 	border-radius: 25px;
 	border: 2px solid #ffffff;
-	padding: 13px;
+	padding: 10px;
 	color: #ffffff;
 	font-size: large;
 }
 
-.resume:hover {
+.cvbtn:hover {
 	background: #ffffff;
 	color: #001418;
 	text-decoration: none;
@@ -149,7 +221,7 @@ p {
 
 .footer-section {
   	padding: 100px 0 100px 0;
-  	background: #001418;
+  	background: #000;
 }
 
 .social-links a {
@@ -174,8 +246,11 @@ p {
 		width: auto;
 		height: auto;
 		padding: 15px;
-		box-shadow: 5px 5px 5px 5px grey;
+		box-shadow: 1px 1px 1px 1px grey;
 		transition: 0.8s;
+	}
+	.intro-section {
+		height: 100vh;
 	}
 }
 
@@ -183,14 +258,15 @@ p {
 	
 	.nav-item {
 		text-align: center;
+		scroll-behavior: smooth;
 	}
 	.navbar-nav {
-		background: rgb(80, 89, 90);
+		background: #000;
 	}
 	.service div:hover {
 		width: 100%;
 		padding: 10px;
-		box-shadow: 5px 5px 5px 5px grey;
+		box-shadow: 1px 1px 1px 1px grey;
 		transition: 0.8s;
 	}
 }

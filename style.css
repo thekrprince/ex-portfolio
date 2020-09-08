@@ -151,8 +151,9 @@ p {
 .intro-section {
 	padding: 200px 0 200px 0;
 	background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/bg.jpg);
-	background-size: 100%;
+	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 .section-greeting,
@@ -233,6 +234,11 @@ p {
   	margin-right: 0;
 }
 
+.social-links a:hover {
+	text-decoration: none;
+	color: #fff;
+}
+
 .f-section-title,
 .copyright {
   	color: #ffffff;
@@ -255,7 +261,29 @@ p {
 }
 
 @media only screen and (max-width: 768px) {
-	
+	.header-section {
+		position: relative;
+		padding: 10px 0 5px 0;
+		width: 100%;
+		background: #000;
+	}
+	.intro-section {
+		padding: 120px 0 100px 0;
+		min-height: 80%;
+	}
+	.section-title {
+  		font-size: 40px;
+	}
+	.section-greeting {
+		font-size: 25px;
+	}
+	.cvbtn {
+		border-radius: 25px;
+		border: 2px solid #ffffff;
+		padding: 10px;
+		color: #ffffff;
+		font-size: medium;
+	}
 	.nav-item {
 		text-align: center;
 		scroll-behavior: smooth;
@@ -263,10 +291,19 @@ p {
 	.navbar-nav {
 		background: #000;
 	}
+	.about-text {
+		padding-top: 15px;
+	}
+	.service div {
+		padding: 1rem;
+	}
 	.service div:hover {
 		width: 100%;
 		padding: 10px;
 		box-shadow: 1px 1px 1px 1px grey;
 		transition: 0.8s;
+	}
+	.service-title {
+		font-size: 25px;
 	}
 }

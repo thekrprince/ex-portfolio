@@ -15,3 +15,9 @@ window.addEventListener('load', () => {
 $(window).scroll(function () {
   $('header').toggleClass('scrolled', $(this).scrollTop() > 50);
 });
+
+
+$(".nav .nav-link").on("click", function () {
+  $(".nav").find(".active").removeClass("active");
+  $(this).addClass("active");
+});

@@ -120,16 +120,17 @@ p {
 #nav-menu ul li a {
   	color: #ffffff;
   	font-size: 16px;
-  	font-weight: 500;
+  	font-weight: 400;
 	z-index: 999;
 }
 
-#nav-menu ul li a:hover {
-	color: rgb(230, 103, 87);
+#nav-menu ul li a:hover,
+.active {
+	color: rgb(207, 240, 23);
 }
 
-.active {
-	color: rgb(118, 204, 48);
+#nav-menu {
+	transition: 0.5s ease-in;
 }
 
 .site-logo {
@@ -141,7 +142,7 @@ p {
 
 .site-logo:hover {
 	text-decoration: none;
-	color: rgb(230, 103, 87);
+	color: #fff;
 }
 
 /*-----------------------*/
@@ -239,6 +240,17 @@ p {
   	padding: 100px 0 100px 0;
 }
 
+.blog-section a {
+	color: inherit;
+	border-bottom: dotted 1px;
+}
+
+.blog-section a:hover {
+	color: inherit;
+	text-decoration: none;
+	border-bottom: none;
+}
+
 /*-----------------------*/
 /* Contact section css
 /*-----------------------*/
@@ -331,6 +343,7 @@ p {
 		padding: 10px;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 		transition: 0.3s;
+		margin: 0 15px;
 	}
 	.service-title {
 		font-size: 25px;

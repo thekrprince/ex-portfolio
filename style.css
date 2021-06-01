@@ -150,7 +150,7 @@ p {
 /*-----------------------*/
 
 .intro-section {
-	padding: 200px 0 200px 0;
+	padding: 30vh 0;
 	background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/bg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -160,6 +160,7 @@ p {
 .section-greeting,
 .section-title {
   	color: #ffffff;
+		margin: auto;
 }
 
 .cvbtn {
@@ -290,7 +291,7 @@ p {
 /*-----------------------*/
 /* Responsive css
 /*-----------------------*/
-@media only screen and (min-width: 768px) and (max-width: 1448px) {
+@media only screen and (min-width: 768px) and (max-width: 1920px) {
 	.service div:hover {
 		padding: 15px;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -309,7 +310,7 @@ p {
 		background: #000;
 	}
 	.intro-section {
-		padding: 200px 0 100px 0;
+		padding: 40vh 0;
 		min-height: 100%;
 	}
 	.section-title {

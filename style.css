@@ -31,14 +31,6 @@ p {
   line-height: 1.8;
 }
 
-.section-title {
-  font-size: 60px;
-}
-
-.section-title span {
-  color: #e1fc49;
-}
-
 /*=== Preloader ===*/
 
 #preloader {
@@ -134,19 +126,23 @@ p {
 }
 
 .header-section.scrolled {
-  background-color: #000;
+  background-color: #fff;
 }
 
 #nav-menu ul li a {
-  color: #ffffff;
+  color: #000;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 3px;
   z-index: 999;
 }
 
 #nav-menu ul li a:hover,
 .active {
-  color: rgb(207, 240, 23);
+  font-weight: bold;
+  line-height: 1.5;
+  text-decoration: underline;
 }
 
 #nav-menu {
@@ -170,32 +166,45 @@ p {
 /*-----------------------*/
 
 .intro-section {
-  padding: 30vh 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(images/bg.jpg);
+  padding: 40vh 0;
+  background: #ffde29;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-.section-greeting,
+.section-text h3 {
+  font-size: 30px;
+  margin-bottom: 2rem;
+}
+
+.section-text h1 {
+  font-size: 50px;
+  background: rgb(0, 85, 71);
+  width: 40rem;
+  padding: 1rem 0;
+  border-radius: 2rem;
+  color: white;
+}
+
+.section-text h1 span {
+  font-weight: bold;
+}
+
 .section-title {
-  color: #ffffff;
   margin: auto;
 }
 
-.cvbtn {
-  border-radius: 25px;
-  border: 2px solid #ffffff;
-  padding: 10px;
-  color: #ffffff;
-  font-size: large;
-}
+/* ---- particles.js container ---- */
 
-.cvbtn:hover {
-  background: #ffffff;
-  color: #001418;
-  text-decoration: none;
+#particles-js {
+  position: absolute;
+  max-width: 100%;
+  height: 100%;
+  background-image: url('');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 /*-----------------------*/
@@ -338,9 +347,6 @@ p {
   .intro-section {
     padding: 40vh 0;
     min-height: 100%;
-  }
-  .section-title {
-    font-size: 40px;
   }
   .section-greeting {
     font-size: 25px;

@@ -2,6 +2,12 @@
 /* Template default css
 /*-----------------------*/
 
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --yellow-color: #ffde29;
+}
+
 html,
 body {
   height: 100%;
@@ -40,14 +46,14 @@ p {
   top: 0;
   left: 0;
   z-index: 999999;
-  background: #ffffff;
+  background: var(--white-color);
   transition: opacity 0.5s ease;
 }
 
 .loader {
   width: 40px;
   height: 40px;
-  border: 4px solid #000;
+  border: 4px solid var(--black-color);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -126,11 +132,11 @@ p {
 }
 
 .header-section.scrolled {
-  background-color: #fff;
+  background-color: var(--white-color);
 }
 
 #nav-menu ul li a {
-  color: #000;
+  color: var(--black-color);
   font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
@@ -152,13 +158,13 @@ p {
 .site-logo {
   font-size: 30px;
   font-weight: bold;
-  color: #ffffff;
+  color: var(--black-color);
   text-decoration: none;
 }
 
 .site-logo:hover {
   text-decoration: none;
-  color: #fff;
+  color: var(--black-color);
 }
 
 /*-----------------------*/
@@ -167,7 +173,7 @@ p {
 
 .intro-section {
   padding: 40vh 0;
-  background: #ffde29;
+  background: var(--yellow-color);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -179,25 +185,32 @@ p {
 }
 
 .section-text h3 {
-  font-size: 30px;
+  font-size: 20px;
   margin-bottom: 2rem;
+  color: var(--black-color);
 }
 
 .section-text h1 {
   font-size: 50px;
   background: rgb(0, 85, 71);
   width: 40rem;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   border-radius: 2rem;
-  color: white;
+  color: var(--white-color);
 }
 
 .section-text h1 span {
   font-weight: bold;
 }
 
-.section-title {
+/* .section-title {
   margin: auto;
+} */
+
+.svg-image {
+  width: 400px;
+  height: 400px;
+  float: right;
 }
 
 /* ---- particles.js container ---- */
@@ -205,9 +218,10 @@ p {
 #particles-js {
   position: absolute;
   top: 0;
-  max-width: 100%;
+  left: 0;
+  width: 100%;
   height: 100%;
-  color: black;
+  color: var(--black-color);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -223,7 +237,7 @@ p {
 }
 
 .myintro span {
-  color: rgb(247, 175, 68);
+  color: var(--yellow-color);
 }
 
 .about-text p {
@@ -236,18 +250,22 @@ p {
 
 .services-section {
   padding: 100px 0 100px 0;
-  background: #000;
+  background: var(--black-color);
+}
+
+.back-text {
+  position: absolute;
 }
 
 .services-section h2,
 h3 {
-  color: #fff;
+  color: var(--white-color);
 }
 
 .service img {
   width: 80px;
   height: 80px;
-  background: #ffde29;
+  background: var(--yellow-color);
 }
 
 /*-----------------------*/
@@ -256,23 +274,23 @@ h3 {
 
 .portfolio-section {
   padding: 100px 0 100px 0;
-  background: #ffde29;
+  background: var(--yellow-color);
 }
 
 .work-boxes {
-  border: 1px solid #000;
+  border: 1px solid var(--black-color);
 }
 
 .work-boxes:hover,
 .work-boxes:hover h5 {
-  background-color: black;
-  color: #fff;
+  background-color: var(--black-color);
+  color: var(--white-color);
 }
 
 .work-title-border {
   height: 2px;
   width: 10px;
-  color: red;
+  color: var(--black-color);
 }
 
 .work-boxes-icon {
@@ -285,11 +303,16 @@ h3 {
 /*-----------------------*/
 
 .blog-section {
+  background-color: var(--black-color);
   padding: 100px 0 100px 0;
 }
 
+.blog-section h2 {
+  color: var(--white-color);
+}
+
 .blog-section a {
-  color: inherit;
+  color: var(--white-color);
   border-bottom: dotted 1px;
 }
 
@@ -309,6 +332,7 @@ h3 {
 /*-----------------------*/
 
 .contact-section {
+  background: var(--yellow-color);
   padding: 100px 0 100px 0;
 }
 

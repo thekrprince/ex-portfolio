@@ -236,27 +236,37 @@ p {
 
 .services-section {
   padding: 100px 0 100px 0;
+  background: #000;
+}
+
+.services-section h2,
+h3 {
+  color: #fff;
 }
 
 .service img {
   width: 80px;
   height: 80px;
+  background: #ffde29;
 }
 
 /*-----------------------*/
-/* Portfolio section css
+/* Project section css
 /*-----------------------*/
 
 .portfolio-section {
   padding: 100px 0 100px 0;
+  background: #ffde29;
 }
 
 .work-boxes {
   border: 1px solid #000;
 }
 
-.work-boxes:hover {
-  background-color: rgb(217, 236, 236);
+.work-boxes:hover,
+.work-boxes:hover h5 {
+  background-color: black;
+  color: #fff;
 }
 
 .work-title-border {
@@ -334,11 +344,6 @@ p {
 /* Responsive css
 /*-----------------------*/
 @media only screen and (min-width: 768px) and (max-width: 1920px) {
-  .service div:hover {
-    padding: 15px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: 0.3s;
-  }
   .intro-section {
     height: 100vh;
   }

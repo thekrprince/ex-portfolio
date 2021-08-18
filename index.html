@@ -10,6 +10,11 @@
 	<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 	<!-- Google fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&family=Playfair+Display&display=swap"
+		rel="stylesheet">
 	<!-- My CSS -->
 	<link rel="stylesheet" href="style.css" />
 	<!-- Font Awesome icons -->
@@ -29,11 +34,11 @@
 
 	<!-- Header section start -->
 	<header class="header-section">
-		<nav class="navbar navbar-expand-md navbar-dark">
+		<nav class="navbar navbar-expand-md navbar-light">
 			<div class="container" data-aos="fade-down">
 				<a class="site-logo" href="https://krprince.com/">KP</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-menu"
-					aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
@@ -49,7 +54,7 @@
 							<a class="nav-link" href="#services">Services</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#portfolio">Portfolio</a>
+							<a class="nav-link" href="#portfolio">Projects</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#blog">Blogs</a>
@@ -65,65 +70,37 @@
 
 	<!-- Intro section start -->
 	<section class="intro-section">
-		<div class="container text-center">
-			<div class="row">
+		<div class="container">
+			<div class="row bio">
 				<div class="col-lg-12">
 					<div class="col-xl-12 offset-xl-l" data-aos="fade-up">
 						<div class="section-text">
-							<h3 class="section-greeting">Welcome</h3>
-							<h2 class="section-title">
-								I'm a fullstack
-								<span class="simple-text-rotate font-weight-bold">web developer</span>, <br />just started
-								this journey
-							</h2>
+							<h4 class="section-title">
+								Hello, My name is
+								<span class="simple-text-rotate font-weight-bold">Prince</span>
+							</h4>
+							<div class="banner-content">
+								<h3 class="section-title">I am a</h3>
+								<h1 class="section-title">Web Developer</h1>
+							</div>
 						</div>
-					</div>
-					<div class="mt-4 pt-5" data-aos="fade-up">
-						<a href="downloads/Resume.pdf" class="cvbtn">
-							DOWNLOAD CV
-						</a>
+						<div class="svg-image">
+							<img src="images/character 18.svg" alt="">
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+			<div id="particles-js"></div>
 	</section>
 	<!-- Intro section end -->
 
-	<!-- About section start -->
-	<section class="about-section" id="about">
-		<div class=" container">
-			<div class="row">
-				<div class="col-lg-6 col-md-12" data-aos="fade-up">
-					<img src="images/myDp.jpeg" class="img-thumbnail" alt="myPic" />
-				</div>
-				<div class="col-lg-6 col-md-12 about-text" data-aos="fade-up">
-					<h2>About Me</h2>
-					<h4 class="mt-4 myintro">
-						Hello!
-						<span class="text-custom font-weight-bold">I'm Kumar Prince.</span>
-					</h4>
-					<p class="mt-3">
-						I am working as a Fullstack Developer in Bangalore, IN. I have 3+
-						years of experience in IT industry.
-					</p>
-					<p class="mt-3">
-						Experienced in HTML, CSS, Javascript, Bootstrap, React, Python, Django etc.
-					</p>
-					<p class="mt-3">
-						Building high quality, scalable solutions for the web across a wide range of industries.
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- About section end -->
-
 	<!-- Services section start -->
-	<section class="services-section bg-light" id="services">
+	<section class="services-section" id="services">
 		<div class="container text-center">
 			<div class="row">
 				<div class="col" data-aos="fade-up">
 					<h2>My Services</h2>
+					<div class="back-text">Services</div>
 					<p class="text-muted">I design the complete Product.</p>
 				</div>
 			</div>
@@ -202,14 +179,14 @@
 	</section>
 
 	<!-- Blog section start -->
-	<section class="blog-section bg-light" id="blog">
+	<section class="blog-section" id="blog">
 		<div class="container text-center">
 			<div class="row">
 				<div class="col" data-aos="fade-up">
 					<h2>Blogs</h2>
-					<p class="text-muted">I try to share the amazing things i have learnt by writing blogs. If you want
-						to
-						see more of my technical blogs. Click <a href="/">here</a> </p>
+					<p class="text-muted">I like to share my knowledge and technical journey by writing blogs.
+						<a href="https://blog.krprince.com" target="_blank">Check it out here</a>
+					</p>
 				</div>
 			</div>
 		</div>
@@ -270,6 +247,8 @@
 	<!-- Footer section end -->
 
 	<!-- Optional Javascript-->
+	<!-- particles js -->
+	<script src="js/particles.js"></script>
 	<!--jquery cdn -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -282,7 +261,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
 		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
 		crossorigin="anonymous"></script>
-	<script src="main.js"></script>
+	<script src="js/main.js"></script>
 	<!-- AOS -->
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script>

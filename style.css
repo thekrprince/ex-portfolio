@@ -137,8 +137,9 @@ p {
 
 #nav-menu ul li a {
   color: var(--black-color);
+  font-family: 'Nunito', sans-serif;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 3px;
   z-index: 999;
@@ -167,50 +168,118 @@ p {
   color: var(--black-color);
 }
 
+@media only screen and (max-width: 768px) {
+  .header-section {
+    position: fixed;
+    padding: 8px 0 4px 0;
+    width: 100%;
+    background: var(--white-color);
+  }
+  .nav-item {
+    text-align: center;
+    scroll-behavior: smooth;
+  }
+  .navbar-nav {
+    background: var(--white-color);
+  }
+}
+
 /*-----------------------*/
 /* Intro section css
 /*-----------------------*/
 
 .intro-section {
-  padding: 40vh 0;
+  padding: 25vh 0;
   background: var(--yellow-color);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  height: 100vh;
 }
 
 .row.bio {
   position: relative;
   z-index: 200;
+  height: 60vh;
 }
 
-.section-text h3 {
-  font-size: 20px;
-  margin-bottom: 2rem;
-  color: var(--black-color);
+.section-text {
+  padding-top: 10rem;
+}
+
+.banner-content::before {
+  position: absolute;
+  top: 60%;
+  left: -110px;
+  content: '';
+  background-image: url(images/paper-shape.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 50%;
+  z-index: -1;
 }
 
 .section-text h1 {
   font-size: 50px;
-  background: rgb(0, 85, 71);
-  width: 40rem;
   padding: 0.5rem 0;
   border-radius: 2rem;
   color: var(--white-color);
+  font-family: 'Playfair Display', serif;
 }
 
 .section-text h1 span {
   font-weight: bold;
 }
 
-/* .section-title {
-  margin: auto;
-} */
+.section-text h3 {
+  font-family: 'Playfair Display', serif;
+}
 
 .svg-image {
   width: 400px;
   height: 400px;
-  float: right;
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .intro-section {
+    padding: 5vh 0;
+    min-height: 100%;
+  }
+  .section-title {
+    margin: auto;
+    text-align: center;
+  }
+  .section-text h1 {
+    font-size: 30px;
+  }
+  .svg-image {
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    right: 32%;
+    top: 400px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .intro-section {
+    padding: 10vh 0;
+    min-height: 100%;
+  }
+  .svg-image {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    right: 20%;
+    top: 50%;
+  }
+  .section-text h1 {
+    word-wrap: break-word;
+    word-break: break-all;
+    max-width: 85vw;
+  }
 }
 
 /* ---- particles.js container ---- */
@@ -266,6 +335,22 @@ h3 {
   width: 80px;
   height: 80px;
   background: var(--yellow-color);
+}
+
+@media only screen and (max-width: 768px) {
+  .service div {
+    padding: 1rem;
+  }
+  .service div:hover {
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s;
+    margin: 0 15px;
+  }
+  .service-title {
+    font-size: 25px;
+  }
 }
 
 /*-----------------------*/
@@ -362,59 +447,4 @@ h3 {
 .f-section-title,
 .copyright {
   color: #ffffff;
-}
-
-/*-----------------------*/
-/* Responsive css
-/*-----------------------*/
-@media only screen and (min-width: 768px) and (max-width: 1920px) {
-  .intro-section {
-    height: 100vh;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .header-section {
-    position: fixed;
-    padding: 8px 0 4px 0;
-    width: 100%;
-    background: #000;
-  }
-  .intro-section {
-    padding: 40vh 0;
-    min-height: 100%;
-  }
-  .section-greeting {
-    font-size: 25px;
-  }
-  .cvbtn {
-    border-radius: 25px;
-    border: 2px solid #ffffff;
-    padding: 10px;
-    color: #ffffff;
-    font-size: medium;
-  }
-  .nav-item {
-    text-align: center;
-    scroll-behavior: smooth;
-  }
-  .navbar-nav {
-    background: #000;
-  }
-  .about-text {
-    padding-top: 15px;
-  }
-  .service div {
-    padding: 1rem;
-  }
-  .service div:hover {
-    width: 100%;
-    padding: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: 0.3s;
-    margin: 0 15px;
-  }
-  .service-title {
-    font-size: 25px;
-  }
 }

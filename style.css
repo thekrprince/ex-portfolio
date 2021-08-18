@@ -173,14 +173,17 @@ p {
     position: fixed;
     padding: 8px 0 4px 0;
     width: 100%;
-    background: var(--white-color);
+    background: var(--yellow-color);
   }
   .nav-item {
     text-align: center;
     scroll-behavior: smooth;
   }
+  #nav-menu ul li a {
+    color: var(--white-color);
+  }
   .navbar-nav {
-    background: var(--white-color);
+    background: var(--black-color);
   }
 }
 
@@ -384,7 +387,8 @@ h3 {
   font-size: 140px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #181818;
+  color: var(--white-color);
+  opacity: 0.05;
   z-index: 9;
 }
 
@@ -449,6 +453,32 @@ h3 {
   background: var(--yellow-color);
 }
 
+.col.portfolio-heading h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 600;
+  position: relative;
+  z-index: 99;
+}
+
+.col.portfolio-heading p {
+  margin-top: 3rem;
+}
+
+.back-text-yellow {
+  position: absolute;
+  top: -90px;
+  left: 0;
+  right: 0;
+  font-size: 140px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--black-color);
+  opacity: 0.04;
+  z-index: 9;
+}
+
 .work-boxes {
   border: 1px solid var(--black-color);
 }
@@ -468,6 +498,39 @@ h3 {
 .work-boxes-icon {
   color: rgb(212, 117, 117);
   font-size: 40px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .col.portfolio-heading h2 {
+    font-size: 40px;
+  }
+  .back-text-yellow {
+    top: -60px;
+    font-size: 100px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .col.portfolio-heading h2 {
+    font-size: 30px;
+  }
+  .back-text-yellow {
+    top: -50px;
+    font-size: 80px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .back-text-yellow {
+    top: -45px;
+    font-size: 70px;
+  }
+  .col.portfolio-heading {
+    margin-bottom: 1.5rem;
+  }
+  .col.portfolio-heading h2 {
+    font-size: 20px;
+  }
 }
 
 /*-----------------------*/

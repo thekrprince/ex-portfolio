@@ -388,7 +388,14 @@ h3 {
   z-index: 9;
 }
 
+.service div:hover img {
+  background: var(--white-color);
+}
+
 @media only screen and (max-width: 768px) {
+  .services-section {
+    padding: 70px 0 70px 0;
+  }
   .service div {
     padding: 0.5rem;
   }
@@ -396,10 +403,17 @@ h3 {
     transition: 0.3s;
   }
   .service-title {
-    font-size: 25px;
+    font-size: 20px;
   }
-  .service div:hover img {
-    background: var(--white-color);
+  .back-text {
+    top: -45px;
+    font-size: 70px;
+  }
+  .col.service-heading {
+    margin-bottom: 1.5rem;
+  }
+  .col.service-heading h2 {
+    font-size: 20px;
   }
 }
 
@@ -417,7 +431,6 @@ h3 {
   .col.service-heading {
     margin-bottom: 3rem;
   }
-
   .col.service-heading h2 {
     font-size: 30px;
   }

@@ -542,6 +542,19 @@ h3 {
   padding: 100px 0 100px 0;
 }
 
+.col.blog-heading h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 600;
+  position: relative;
+  z-index: 99;
+}
+
+.col.blog-heading p {
+  margin-top: 2rem;
+}
+
 .blog-section h2 {
   color: var(--white-color);
 }
@@ -562,6 +575,27 @@ h3 {
   grid-template-columns: repeat(auto-fit, 320px);
 }
 
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .col.blog-heading h2 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .col.blog-heading h2 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .col.blog-heading {
+    margin-bottom: 1.5rem;
+  }
+  .col.blog-heading h2 {
+    font-size: 20px;
+  }
+}
+
 /*-----------------------*/
 /* Contact section css
 /*-----------------------*/
@@ -569,6 +603,42 @@ h3 {
 .contact-section {
   background: var(--yellow-color);
   padding: 100px 0 100px 0;
+}
+
+.col.contact-heading h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 600;
+  position: relative;
+  z-index: 99;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .col.contact-heading h2 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .col.contact-heading h2 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contact-section {
+    padding: 70px 0;
+  }
+  .col.contact-heading h2 {
+    font-size: 20px;
+  }
+  .contact-details h5 {
+    font-size: 15px;
+  }
+  .contact-details p {
+    font-size: 13px;
+  }
 }
 
 /*-----------------------*/

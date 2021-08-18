@@ -16,11 +16,14 @@ $(window).scroll(function () {
   $('header').toggleClass('scrolled', $(this).scrollTop() > 50);
 });
 
-$('.nav .nav-link').on('click', function () {
-  $('.nav').find('.active').removeClass('active');
-  $(this).addClass('active');
-});
+// window.onscroll(function () {
+//   var headerClass = document.querySelector('.header-section');
+//   if (headerClass.scrollTop > '50px') {
+//     headerClass.classList.toggle('scrolled');
+//   }
+// });
 
+/** Particle JS **/
 particlesJS('particles-js', {
   particles: {
     number: {

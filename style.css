@@ -189,7 +189,7 @@ p {
 /*-----------------------*/
 
 .intro-section {
-  padding: 25vh 0;
+  padding: 20vh 0;
   background: var(--yellow-color);
   height: 100vh;
 }
@@ -206,7 +206,7 @@ p {
 
 .banner-content::before {
   position: absolute;
-  top: 60%;
+  top: 67%;
   left: -110px;
   content: '';
   background-image: url(images/paper-shape.png);
@@ -214,16 +214,16 @@ p {
   background-position: center center;
   background-repeat: no-repeat;
   width: 50%;
-  height: 50%;
+  height: 70%;
   z-index: -1;
 }
 
 .section-text h1 {
   font-size: 50px;
-  padding: 0.5rem 0;
   border-radius: 2rem;
   color: var(--white-color);
   font-family: 'Playfair Display', serif;
+  transform: rotate(-5deg);
 }
 
 .section-text h1 span {
@@ -232,6 +232,7 @@ p {
 
 .section-text h3 {
   font-family: 'Playfair Display', serif;
+  transform: rotate(-5deg);
 }
 
 .svg-image {
@@ -250,16 +251,30 @@ p {
   .section-title {
     margin: auto;
     text-align: center;
+    color: #000;
   }
   .section-text h1 {
-    font-size: 30px;
+    font-size: 40px;
+    font-weight: bold;
+    transform: none;
+    color: #000;
+  }
+  .section-text h3 {
+    transform: none;
+  }
+  .section-text h4 {
+    font-size: 20px;
   }
   .svg-image {
     width: 350px;
     height: 300px;
     position: absolute;
     right: 32%;
-    top: 400px;
+    top: 330px;
+  }
+  .banner-content::before {
+    content: '';
+    background: none;
   }
 }
 
@@ -268,17 +283,31 @@ p {
     padding: 10vh 0;
     min-height: 100%;
   }
+  .section-title {
+    margin: auto;
+    text-align: center;
+    color: #000;
+  }
   .svg-image {
     width: 300px;
     height: 300px;
     position: absolute;
     right: 20%;
-    top: 50%;
+    top: 20rem;
   }
   .section-text h1 {
     word-wrap: break-word;
     word-break: break-all;
+    color: #000;
     max-width: 85vw;
+    transform: none;
+  }
+  .section-text h3 {
+    transform: none;
+  }
+  .banner-content::before {
+    content: '';
+    background: none;
   }
 }
 

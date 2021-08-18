@@ -153,7 +153,7 @@ p {
 }
 
 #nav-menu {
-  transition: 0.5s ease-in;
+  transition: 0.3s ease-in;
 }
 
 .site-logo {
@@ -351,10 +351,6 @@ p {
   background: var(--black-color);
 }
 
-.back-text {
-  position: absolute;
-}
-
 .services-section h2,
 h3 {
   color: var(--white-color);
@@ -364,21 +360,70 @@ h3 {
   width: 80px;
   height: 80px;
   background: var(--yellow-color);
+  margin-bottom: 0.4rem;
+}
+
+.col.service-heading {
+  margin-bottom: 5rem;
+}
+
+.col.service-heading h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 500;
+  position: relative;
+  z-index: 99;
+}
+
+.back-text {
+  position: absolute;
+  top: -90px;
+  left: 0;
+  right: 0;
+  font-size: 140px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #181818;
+  z-index: 9;
 }
 
 @media only screen and (max-width: 768px) {
   .service div {
-    padding: 1rem;
+    padding: 0.5rem;
   }
   .service div:hover {
-    width: 100%;
-    padding: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.3s;
-    margin: 0 15px;
   }
   .service-title {
     font-size: 25px;
+  }
+  .service div:hover img {
+    background: var(--white-color);
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .col.service-heading h2 {
+    font-size: 40px;
+  }
+  .back-text {
+    top: -60px;
+    font-size: 100px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .col.service-heading {
+    margin-bottom: 3rem;
+  }
+
+  .col.service-heading h2 {
+    font-size: 30px;
+  }
+  .back-text {
+    top: -50px;
+    font-size: 80px;
   }
 }
 

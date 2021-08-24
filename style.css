@@ -673,7 +673,7 @@ h3 {
 
 .blog-section {
   background-color: var(--black-color);
-  padding: 100px 0 100px 0;
+  padding: 70px 0;
 }
 
 .col.blog-heading h2 {
@@ -686,7 +686,7 @@ h3 {
 }
 
 .col.blog-heading p {
-  margin-top: 2rem;
+  margin-top: 5rem;
 }
 
 .blog-section h2 {
@@ -701,7 +701,7 @@ h3 {
 .blog-section a:hover {
   color: inherit;
   text-decoration: none;
-  border-bottom: none;
+  border-bottom: 1px solid var(--white-color);
 }
 
 .blog-wrapper {
@@ -736,7 +736,7 @@ h3 {
 
 .contact-section {
   background: var(--yellow-color);
-  padding: 100px 0 100px 0;
+  padding: 70px 0;
 }
 
 .col.contact-heading h2 {

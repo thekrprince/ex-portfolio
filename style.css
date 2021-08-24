@@ -168,7 +168,7 @@ p {
   color: var(--black-color);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .header-section {
     position: fixed;
     padding: 8px 0 4px 0;
@@ -242,8 +242,9 @@ p {
   width: 400px;
   height: 400px;
   position: absolute;
-  right: 10px;
-  top: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -15%);
 }
 /* Media Query Intro Section*/
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
@@ -272,8 +273,9 @@ p {
     width: 350px;
     height: 300px;
     position: absolute;
-    right: 32%;
-    top: 330px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -15%);
   }
   .banner-content::before {
     content: '';
@@ -295,8 +297,9 @@ p {
     width: 250px;
     height: 250px;
     position: absolute;
-    right: 20%;
-    top: 20rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -15%);
   }
   .section-text h1 {
     word-wrap: break-word;
@@ -313,7 +316,7 @@ p {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 720px) {
   .intro-section {
     padding: 10vh 0;
     min-height: 100%;
@@ -327,8 +330,9 @@ p {
     width: 300px;
     height: 300px;
     position: absolute;
-    right: 20%;
-    top: 20rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -15%);
   }
   .section-text h1 {
     word-wrap: break-word;

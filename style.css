@@ -3,9 +3,13 @@
 /*-----------------------*/
 
 :root {
-  --white-color: #fff;
-  --black-color: #000;
-  --yellow-color: #ffde29;
+  --bg-black-color: #000;
+  --bg-blue-color: #011f34;
+  --bg-grey-color: #1d1d1d;
+  --nav-color: #ffc6c6;
+  --text-black: #000;
+  --text-white: #fff;
+  /* --yellow-color: #ffde29; */
 }
 
 html,
@@ -21,20 +25,39 @@ h3,
 h4,
 h5,
 h6 {
-  color: #110d0d;
-  margin: 0;
   font-weight: 600;
   font-family: 'Josefin Sans', sans-serif;
+  color: #fff;
 }
 
 li {
   list-style: none;
 }
 
-p {
-  font-size: 18px;
-  color: #110d0d;
-  line-height: 1.8;
+.back-text {
+  position: absolute;
+  top: -90px;
+  left: 0;
+  right: 0;
+  font-size: 140px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--bg-black-color);
+  opacity: 0.05;
+  z-index: 9;
+}
+
+.back-text-yellow {
+  position: absolute;
+  top: -90px;
+  left: 0;
+  right: 0;
+  font-size: 140px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--bg-blue-color);
+  opacity: 0.04;
+  z-index: 9;
 }
 
 /*=== Preloader ===*/
@@ -46,14 +69,14 @@ p {
   top: 0;
   left: 0;
   z-index: 999999;
-  background: var(--white-color);
+  background: var(--bg-black-color);
   transition: opacity 0.5s ease;
 }
 
 .loader {
   width: 40px;
   height: 40px;
-  border: 4px solid var(--black-color);
+  border: 4px solid var(--bg-blue-color);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -132,20 +155,17 @@ p {
 }
 
 .header-section.scrolled {
-  background-color: var(--white-color);
-}
-
-#nav-menu a {
-  transition: 0.3s ease-in;
+  background-color: var(--bg-black-color);
 }
 
 #nav-menu ul li a {
-  color: var(--black-color);
+  color: var(--text-white);
   font-family: 'Nunito', sans-serif;
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 3px;
+  transition: 0.5s ease;
   z-index: 999;
 }
 
@@ -159,13 +179,13 @@ p {
 .site-logo {
   font-size: 30px;
   font-weight: bold;
-  color: var(--black-color);
+  color: var(--text-white);
   text-decoration: none;
 }
 
 .site-logo:hover {
   text-decoration: none;
-  color: var(--black-color);
+  color: var(--bg-blue-color);
 }
 
 @media only screen and (max-width: 767px) {
@@ -173,17 +193,17 @@ p {
     position: fixed;
     padding: 8px 0 4px 0;
     width: 100%;
-    background: var(--yellow-color);
+    background: var(--bg-grey-color);
   }
   .nav-item {
     text-align: center;
     scroll-behavior: smooth;
   }
   #nav-menu ul li a {
-    color: var(--white-color);
+    color: var(--bg-black-color);
   }
   .navbar-nav {
-    background: var(--black-color);
+    background: var(--bg-blue-color);
   }
 }
 
@@ -193,7 +213,7 @@ p {
 
 .intro-section {
   padding: 20vh 0;
-  background: var(--yellow-color);
+  background: var(--bg-grey-color);
   height: 100vh;
 }
 
@@ -224,7 +244,7 @@ p {
 .section-text h1 {
   font-size: 50px;
   border-radius: 2rem;
-  color: var(--white-color);
+  color: var(--bg-black-color);
   font-family: 'Playfair Display', serif;
   transform: rotate(-5deg);
 }
@@ -235,7 +255,7 @@ p {
 
 .section-text h3 {
   font-family: 'Playfair Display', serif;
-  color: var(--white-color);
+  color: var(--bg-black-color);
   transform: rotate(-5deg);
 }
 
@@ -298,7 +318,7 @@ p {
   .section-title {
     margin: auto;
     text-align: center;
-    color: #000;
+    color: var(--text-black);
   }
   .svg-image {
     width: 250px;
@@ -310,7 +330,7 @@ p {
   }
   .section-text h1 {
     word-wrap: break-word;
-    color: #000;
+    color: var(--text-black);
     max-width: 85vw;
     transform: none;
   }
@@ -331,7 +351,7 @@ p {
   .section-title {
     margin: auto;
     text-align: center;
-    color: #000;
+    color: var(--text-black);
   }
   .svg-image {
     width: 300px;
@@ -343,7 +363,7 @@ p {
   }
   .section-text h1 {
     word-wrap: break-word;
-    color: #000;
+    color: var(--text-black);
     max-width: 85vw;
     transform: none;
   }
@@ -360,7 +380,7 @@ p {
   .section-title {
     margin: auto;
     text-align: center;
-    color: #000;
+    color: var(--text-black);
   }
   .intro-section {
     padding: 3vh 0;
@@ -375,7 +395,7 @@ p {
   }
   .section-text h1 {
     word-wrap: break-word;
-    color: #000;
+    color: var(--text-black);
     font-size: 40px;
     max-width: auto;
     transform: none;
@@ -393,7 +413,7 @@ p {
   .section-title {
     margin: auto;
     text-align: center;
-    color: #000;
+    color: var(--text-black);
   }
   .intro-section {
     padding: 1vh 0;
@@ -408,7 +428,7 @@ p {
   }
   .section-text h1 {
     word-wrap: break-word;
-    color: #000;
+    color: var(--text-black);
     font-size: 35px;
     max-width: auto;
     transform: none;
@@ -426,7 +446,7 @@ p {
   .section-title {
     margin: auto;
     text-align: center;
-    color: #000;
+    color: var(--text-black);
   }
   .intro-section {
     padding: 1vh 0;
@@ -441,7 +461,7 @@ p {
   }
   .section-text h1 {
     word-wrap: break-word;
-    color: #000;
+    color: var(--text-black);
     font-size: 25px;
     max-width: auto;
     transform: none;
@@ -467,7 +487,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  color: var(--black-color);
+  color: var(--bg-blue-color);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -480,11 +500,11 @@ p {
 
 .about-section {
   padding: 100px 0 100px 0;
-  background-color: var(--black-color);
+  background-color: var(--bg-blue-color);
 }
 
 .about-section h2 {
-  color: var(--white-color);
+  color: var(--text-white);
   font-family: 'Playfair Display', serif;
   text-transform: uppercase;
   font-size: 40px;
@@ -492,7 +512,7 @@ p {
 }
 
 .row.about h3 {
-  color: var(--white-color);
+  color: var(--text-white);
 }
 
 .vertical {
@@ -503,7 +523,7 @@ p {
 .vertical-line {
   width: 1px;
   height: 40px;
-  background-color: var(--white-color);
+  background-color: var(--bg-black-color);
 }
 
 .bar-inner {
@@ -517,36 +537,23 @@ p {
 }
 
 .bar.frontend {
-  background: var(--white-color);
+  background: var(--bg-black-color);
   width: 93%;
 }
 
 .bar.backend {
-  background: var(--white-color);
+  background: var(--bg-black-color);
   width: 60%;
 }
 
 .bar.react {
-  background: var(--white-color);
+  background: var(--bg-black-color);
   width: 90%;
 }
 
 .bar.node {
-  background: var(--white-color);
+  background: var(--bg-black-color);
   width: 50%;
-}
-
-.back-text {
-  position: absolute;
-  top: -90px;
-  left: 0;
-  right: 0;
-  font-size: 140px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--white-color);
-  opacity: 0.05;
-  z-index: 9;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
@@ -576,18 +583,18 @@ p {
 
 .services-section {
   padding: 100px 0 100px 0;
-  background: var(--yellow-color);
+  background: var(--bg-grey-color);
 }
 
 .services-section h2,
 h3 {
-  color: var(--black-color);
+  color: var(--text-white);
 }
 
 .service img {
   width: 80px;
   height: 80px;
-  background: var(--yellow-color);
+  background: var(--bg-grey-color);
   margin-bottom: 0.4rem;
 }
 
@@ -604,21 +611,8 @@ h3 {
   z-index: 99;
 }
 
-.back-text-yellow {
-  position: absolute;
-  top: -90px;
-  left: 0;
-  right: 0;
-  font-size: 140px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--black-color);
-  opacity: 0.04;
-  z-index: 9;
-}
-
 .service div:hover img {
-  background: var(--white-color);
+  background: var(--bg-black-color);
 }
 
 @media only screen and (max-width: 768px) {
@@ -675,7 +669,7 @@ h3 {
 
 .portfolio-section {
   padding: 100px 0 100px 0;
-  background: var(--black-color);
+  background: var(--bg-blue-color);
 }
 
 .col.portfolio-heading h2 {
@@ -683,13 +677,13 @@ h3 {
   font-size: 40px;
   text-transform: uppercase;
   font-weight: 600;
-  color: var(--white-color);
+  color: var(--text-white);
   position: relative;
   z-index: 99;
 }
 
 #mywork h5 {
-  color: var(--white-color);
+  color: var(--text-white);
 }
 
 .col.portfolio-heading p {
@@ -697,19 +691,19 @@ h3 {
 }
 
 .work-boxes {
-  border: 1px solid var(--white-color);
+  border: 1px solid var(--bg-black-color);
 }
 
 .work-boxes:hover,
 .work-boxes:hover h5 {
-  background-color: var(--black-color);
-  color: var(--white-color);
+  background-color: var(--bg-grey-color);
+  color: var(--bg-black-color);
 }
 
 .work-title-border {
   height: 2px;
   width: 10px;
-  color: var(--black-color);
+  color: var(--bg-blue-color);
 }
 
 .work-boxes-icon {
@@ -755,7 +749,7 @@ h3 {
 /*-----------------------*/
 
 .blog-section {
-  background-color: var(--yellow-color);
+  background-color: var(--bg-grey-color);
   padding: 70px 0;
 }
 
@@ -773,18 +767,18 @@ h3 {
 }
 
 .blog-section h2 {
-  color: var(--black-color);
+  color: var(--text-white);
 }
 
 .blog-section a {
-  color: var(--black-color);
+  color: var(--text-white);
   border-bottom: dotted 1px;
 }
 
 .blog-section a:hover {
   color: inherit;
   text-decoration: none;
-  border-bottom: 1px solid var(--black-color);
+  border-bottom: 1px solid var(--text-white);
 }
 
 .blog-wrapper {
@@ -818,7 +812,7 @@ h3 {
 /*-----------------------*/
 
 .contact-section {
-  background: var(--black-color);
+  background: var(--bg-blue-color);
   padding: 70px 0;
 }
 
@@ -829,6 +823,10 @@ h3 {
   font-weight: 600;
   position: relative;
   z-index: 99;
+}
+
+.fa {
+  color: var(--text-white);
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {

@@ -11,6 +11,29 @@ window.addEventListener('load', () => {
   preloader.classList.add('preload-finish');
 });
 
+/*------- Nav section -------*/
+var navLinks = document.querySelectorAll('.nav-link');
+var sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (pageYOffset >= sectionTop) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach((nav) => {
+    nav.classList.remove('active');
+    if (nav.classList.contains(current)) {
+      nav.classList.add('active');
+    }
+  });
+});
+
 /*------- Nav bar background change when scroll --------*/
 $(window).scroll(function () {
   $('header').toggleClass('scrolled', $(this).scrollTop() > 50);
@@ -34,10 +57,10 @@ particlesJS('particles-js', {
       },
     },
     color: {
-      value: '#000',
+      value: '#FD5956',
     },
     shape: {
-      type: 'circle',
+      type: 'star',
       stroke: {
         width: 0,
         color: '#000000',
@@ -74,8 +97,8 @@ particlesJS('particles-js', {
     line_linked: {
       enable: true,
       distance: 150,
-      color: '#ffffff',
-      opacity: 0.4,
+      color: '#D0FEFE',
+      opacity: 0.1,
       width: 1,
     },
     move: {

@@ -7,7 +7,6 @@
 	<title>TheKrPrince</title>
 	<link rel="icon" href="images/work.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 	<!-- Google fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,22 +42,22 @@
 				<div class="collapse navbar-collapse" id="nav-menu">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item">
-							<a class="nav-link active" href="#">Home</a>
+							<a class="nav-link home" href="#home">Home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#about">About</a>
+							<a class="nav-link about" href="#about">About</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#services">Services</a>
+							<a class="nav-link services" href="#services">Services</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#portfolio">Projects</a>
+							<a class="nav-link portfolio" href="#portfolio">Projects</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#blog">Blogs</a>
+							<a class="nav-link blog" href="#blog">Blog</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#contact">Contact</a>
+							<a class="nav-link contact" href="#contact">Contact</a>
 						</li>
 				</div>
 			</div>
@@ -67,7 +66,7 @@
 	<!-- Header section end -->
 
 	<!-- Intro section start -->
-	<section class="intro-section">
+	<section class="intro-section section" id="home">
 		<div class="container">
 			<div class="row bio">
 				<div class="col-lg-12">
@@ -83,7 +82,7 @@
 							</div>
 						</div>
 						<div class="svg-image">
-							<img src="images/character 18.svg" alt="working-person">
+							<img class="working-svg" src="images/character 18.svg" alt="working-person">
 						</div>
 					</div>
 				</div>
@@ -92,12 +91,65 @@
 	</section>
 	<!-- Intro section end -->
 
+	<!-- About section start -->
+	<section class="about-section section" id="about">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col about-heading">
+					<div class="back-text">About</div>
+					<h2>About Me</h2>
+				</div>
+			</div>
+
+			<div class="row about mt-5 text-lg-left text-md-left text-sm-left">
+				<div class="vertical">
+					<div class="vertical-line m-auto"></div>
+				</div>
+				<div class="col-lg-6 col-sm-12 mt-3">
+					<h3>Experience</h3>
+					<p class="text-light"><span class="mr-4">2021</span> Started my career as a full time Web Developer.</p>
+					<p class="text-light"><span class="mr-4">2017</span> IT career started in July and I worked on
+						various areas till 2020.</p>
+					<p class="text-light"><span class="mr-4">2016</span> Graduated from RGPV, Bhopal in Computer Science &
+						Engineering.</p>
+				</div>
+				<div class="col-lg-6 col-sm-12 text-light mt-3">
+					<h3>Skills</h3>
+					<div class="mt-2">
+						Front-end
+						<div class="bg-secondary bar-inner">
+							<div class="bar frontend"></div>
+						</div>
+					</div>
+					<div class="mt-2">
+						Back-end
+						<div class="bg-secondary bar-inner">
+							<div class="bar backend"></div>
+						</div>
+					</div>
+					<div class="mt-2">
+						ReactJS
+						<div class="bg-secondary bar-inner">
+							<div class="bar react"></div>
+						</div>
+					</div>
+					<div class="mt-2">
+						NodeJS
+						<div class="bg-secondary bar-inner">
+							<div class="bar node"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- Services section start -->
-	<section class="services-section" id="services">
+	<section class="services-section section" id="services">
 		<div class="container text-center">
 			<div class="row">
 				<div class="col service-heading">
-					<div class="back-text">Services</div>
+					<div class="back-text-yellow">Services</div>
 					<h2>My Services</h2>
 				</div>
 			</div>
@@ -120,11 +172,11 @@
 	<!-- Services section end -->
 
 	<!-- Portfolio section start -->
-	<section class="portfolio-section" id="portfolio">
+	<section class="portfolio-section section" id="portfolio">
 		<div class="container text-center">
 			<div class="row">
 				<div class="col portfolio-heading">
-					<div class="back-text-yellow">Projects</div>
+					<div class="back-text">Projects</div>
 					<h2>My Works</h2>
 					<p class="text-muted">I like to do Web Development alot. Learning more by working on
 						the various kind of projects.</p>
@@ -178,11 +230,11 @@
 	</section>
 
 	<!-- Blog section start -->
-	<section class="blog-section" id="blog">
+	<section class="blog-section section" id="blog">
 		<div class="container text-center">
 			<div class="row">
 				<div class="col blog-heading">
-					<div class="back-text">News</div>
+					<div class="back-text-yellow">News</div>
 					<h2>Blogs</h2>
 					<p class="text-muted">I like to share my knowledge and technical journey by writing blogs.
 						<a href="https://blog.krprince.com" target="_blank">Do check it out.</a>
@@ -194,15 +246,15 @@
 	<!-- Blog section end -->
 
 	<!-- Contact section start -->
-	<section class="contact-section" id="contact">
+	<section class="contact-section section" id="contact">
 		<div class="container text-center">
 			<div class="row justify-content-center">
 				<div class="col contact-heading">
-					<div class="back-text-yellow">Contact</div>
-					<h2>Contact Me</h2>
+					<div class="back-text">Contact</div>
+					<h2 class="text-white">Contact Me</h2>
 				</div>
 			</div>
-			<div class="row mt-5">
+			<div class="row mt-5 text-white">
 				<div class="col-lg-4 contact-details">
 					<i class="fa fa-mobile fa-3x" aria-hidden="true"></i>
 					<h5 class="mt-2 font-weight-bold">Call Me On</h5>
@@ -226,7 +278,7 @@
 	<!-- Contact section end -->
 
 	<!-- Footer section start -->
-	<footer class="footer-section text-center">
+	<footer class="footer-section text-center section">
 		<div class="container">
 			<h1 class="f-section-title mb-5">Let's Work Together</h1>
 			<div class="social-links">

@@ -3,9 +3,12 @@
 /*-----------------------*/
 
 :root {
-  --white-color: #fff;
-  --black-color: #000;
-  --yellow-color: #ffde29;
+  --bg-black-color: #000;
+  --bg-blue-color: #011f34;
+  --bg-yellow-color: #ffde29;
+  --nav-color: #ffffff;
+  --text-black: #000;
+  --text-white: #fff;
 }
 
 html,
@@ -21,8 +24,6 @@ h3,
 h4,
 h5,
 h6 {
-  color: #110d0d;
-  margin: 0;
   font-weight: 600;
   font-family: 'Josefin Sans', sans-serif;
 }
@@ -31,10 +32,30 @@ li {
   list-style: none;
 }
 
-p {
-  font-size: 18px;
-  color: #110d0d;
-  line-height: 1.8;
+.back-text {
+  position: absolute;
+  top: -90px;
+  left: 0;
+  right: 0;
+  font-size: 140px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--bg-black-color);
+  opacity: 0.05;
+  z-index: 9;
+}
+
+.back-text-yellow {
+  position: absolute;
+  top: -90px;
+  left: 0;
+  right: 0;
+  font-size: 140px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--bg-blue-color);
+  opacity: 0.04;
+  z-index: 9;
 }
 
 /*=== Preloader ===*/
@@ -46,14 +67,14 @@ p {
   top: 0;
   left: 0;
   z-index: 999999;
-  background: var(--white-color);
+  background: var(--bg-black-color);
   transition: opacity 0.5s ease;
 }
 
 .loader {
   width: 40px;
   height: 40px;
-  border: 4px solid var(--black-color);
+  border: 4px solid var(--bg-blue-color);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -132,16 +153,17 @@ p {
 }
 
 .header-section.scrolled {
-  background-color: var(--white-color);
+  background-color: var(--nav-color);
 }
 
 #nav-menu ul li a {
-  color: var(--black-color);
+  color: var(--text-black);
   font-family: 'Nunito', sans-serif;
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 3px;
+  transition: 0.5s ease;
   z-index: 999;
 }
 
@@ -149,23 +171,19 @@ p {
 .active {
   font-weight: bold;
   line-height: 1.5;
-  text-decoration: underline;
-}
-
-#nav-menu {
-  transition: 0.3s ease-in;
+  text-decoration: underline 2px;
 }
 
 .site-logo {
   font-size: 30px;
   font-weight: bold;
-  color: var(--black-color);
+  color: var(--text-black);
   text-decoration: none;
 }
 
 .site-logo:hover {
   text-decoration: none;
-  color: var(--black-color);
+  color: var(--bg-blue-color);
 }
 
 @media only screen and (max-width: 767px) {
@@ -173,17 +191,17 @@ p {
     position: fixed;
     padding: 8px 0 4px 0;
     width: 100%;
-    background: var(--yellow-color);
+    background: var(--bg-yellow-color);
   }
   .nav-item {
     text-align: center;
     scroll-behavior: smooth;
   }
   #nav-menu ul li a {
-    color: var(--white-color);
+    color: var(--bg-black-color);
   }
   .navbar-nav {
-    background: var(--black-color);
+    background: var(--bg-blue-color);
   }
 }
 
@@ -193,7 +211,7 @@ p {
 
 .intro-section {
   padding: 20vh 0;
-  background: var(--yellow-color);
+  background: var(--bg-yellow-color);
   height: 100vh;
 }
 
@@ -224,7 +242,7 @@ p {
 .section-text h1 {
   font-size: 50px;
   border-radius: 2rem;
-  color: var(--white-color);
+  color: var(--text-white);
   font-family: 'Playfair Display', serif;
   transform: rotate(-5deg);
 }
@@ -236,17 +254,22 @@ p {
 .section-text h3 {
   font-family: 'Playfair Display', serif;
   transform: rotate(-5deg);
+  color: var(--text-white);
 }
 
 .svg-image {
   width: 400px;
-  height: 400px;
   position: absolute;
   right: 10px;
   top: 15px;
 }
+
+.working-svg {
+  max-width: 80%;
+}
+
 /* Media Query Intro Section*/
-@media only screen and (min-width: 768px) and (max-width: 1280px) {
+@media only screen and (min-width: 768px) and (max-width: 1366px) {
   .intro-section {
     padding: 5vh 0;
     min-height: 100%;
@@ -254,7 +277,7 @@ p {
   .section-title {
     margin: auto;
     text-align: center;
-    color: #000;
+    color: var(--text-black);
   }
   .section-text {
     padding-top: 8rem;
@@ -263,10 +286,11 @@ p {
     font-size: 40px;
     font-weight: bold;
     transform: none;
-    color: #000;
+    color: var(--text-black);
   }
   .section-text h3 {
     transform: none;
+    color: var(--text-black);
   }
   .section-text h4 {
     font-size: 30px;
@@ -293,7 +317,7 @@ p {
   .section-title {
     margin: auto;
     text-align: center;
-    color: #000;
+    color: var(--text-black);
   }
   .svg-image {
     width: 250px;
@@ -305,12 +329,13 @@ p {
   }
   .section-text h1 {
     word-wrap: break-word;
-    color: #000;
+    color: var(--text-black);
     max-width: 85vw;
     transform: none;
   }
   .section-text h3 {
     transform: none;
+    color: var(--text-black);
   }
   .banner-content::before {
     content: '';
@@ -326,7 +351,7 @@ p {
   .section-title {
     margin: auto;
     text-align: center;
-    color: #000;
+    color: var(--text-black);
   }
   .svg-image {
     width: 300px;
@@ -338,12 +363,13 @@ p {
   }
   .section-text h1 {
     word-wrap: break-word;
-    color: #000;
+    color: var(--text-black);
     max-width: 85vw;
     transform: none;
   }
   .section-text h3 {
     transform: none;
+    color: var(--text-black);
   }
   .banner-content::before {
     content: '';
@@ -355,7 +381,7 @@ p {
   .section-title {
     margin: auto;
     text-align: center;
-    color: #000;
+    color: var(--text-black);
   }
   .intro-section {
     padding: 3vh 0;
@@ -370,13 +396,14 @@ p {
   }
   .section-text h1 {
     word-wrap: break-word;
-    color: #000;
+    color: var(--text-black);
     font-size: 40px;
     max-width: auto;
     transform: none;
   }
   .section-text h3 {
     transform: none;
+    color: var(--text-black);
   }
   .banner-content::before {
     content: '';
@@ -388,7 +415,7 @@ p {
   .section-title {
     margin: auto;
     text-align: center;
-    color: #000;
+    color: var(--text-black);
   }
   .intro-section {
     padding: 1vh 0;
@@ -403,13 +430,14 @@ p {
   }
   .section-text h1 {
     word-wrap: break-word;
-    color: #000;
+    color: var(--text-black);
     font-size: 35px;
     max-width: auto;
     transform: none;
   }
   .section-text h3 {
     transform: none;
+    color: var(--text-black);
   }
   .banner-content::before {
     content: '';
@@ -421,7 +449,7 @@ p {
   .section-title {
     margin: auto;
     text-align: center;
-    color: #000;
+    color: var(--text-black);
   }
   .intro-section {
     padding: 1vh 0;
@@ -436,7 +464,7 @@ p {
   }
   .section-text h1 {
     word-wrap: break-word;
-    color: #000;
+    color: var(--text-black);
     font-size: 25px;
     max-width: auto;
     transform: none;
@@ -444,6 +472,7 @@ p {
   .section-text h3 {
     transform: none;
     font-size: 15px;
+    color: var(--text-black);
   }
   .section-text h4 {
     font-size: 15px;
@@ -462,7 +491,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  color: var(--black-color);
+  color: var(--bg-blue-color);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -475,14 +504,81 @@ p {
 
 .about-section {
   padding: 100px 0 100px 0;
+  background-color: var(--bg-blue-color);
 }
 
-.myintro span {
-  color: var(--yellow-color);
+.about-section h2 {
+  color: var(--text-white);
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 500;
 }
 
-.about-text p {
-  font-family: ;
+.row.about h3 {
+  color: var(--text-white);
+}
+
+.vertical {
+  height: 50px;
+  width: 100%;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 40px;
+  background-color: var(--nav-color);
+}
+
+.bar-inner {
+  height: 5px;
+  border-radius: 5px;
+}
+
+.bar {
+  height: 5px;
+  border-radius: 5px;
+}
+
+.bar.frontend {
+  background: #29ff34;
+  width: 93%;
+}
+
+.bar.backend {
+  background: rgb(255, 145, 0);
+  width: 60%;
+}
+
+.bar.react {
+  background: rgb(0, 102, 255);
+  width: 90%;
+}
+
+.bar.node {
+  background: rgb(255, 66, 66);
+  width: 50%;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .col.about-heading h2 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .col.about-heading h2 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .col.about-heading {
+    margin-bottom: 1.5rem;
+  }
+  .col.about-heading h2 {
+    font-size: 20px;
+  }
 }
 
 /*-----------------------*/
@@ -491,18 +587,18 @@ p {
 
 .services-section {
   padding: 100px 0 100px 0;
-  background: var(--black-color);
+  background: var(--bg-yellow-color);
 }
 
 .services-section h2,
-h3 {
-  color: var(--white-color);
+.services-section h3 {
+  color: var(--text-black);
 }
 
 .service img {
   width: 80px;
   height: 80px;
-  background: var(--yellow-color);
+  background: var(--bg-blue-color);
   margin-bottom: 0.4rem;
 }
 
@@ -514,26 +610,13 @@ h3 {
   font-family: 'Playfair Display', serif;
   font-size: 40px;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
   position: relative;
   z-index: 99;
 }
 
-.back-text {
-  position: absolute;
-  top: -90px;
-  left: 0;
-  right: 0;
-  font-size: 140px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--white-color);
-  opacity: 0.05;
-  z-index: 9;
-}
-
 .service div:hover img {
-  background: var(--white-color);
+  background: var(--bg-black-color);
 }
 
 @media only screen and (max-width: 768px) {
@@ -589,8 +672,8 @@ h3 {
 /*-----------------------*/
 
 .portfolio-section {
-  padding: 100px 0 100px 0;
-  background: var(--yellow-color);
+  padding: 100px 0;
+  background: var(--bg-blue-color);
 }
 
 .col.portfolio-heading h2 {
@@ -598,41 +681,33 @@ h3 {
   font-size: 40px;
   text-transform: uppercase;
   font-weight: 600;
+  color: var(--text-white);
   position: relative;
   z-index: 99;
+}
+
+#mywork h5 {
+  color: var(--text-white);
 }
 
 .col.portfolio-heading p {
   margin-top: 3rem;
 }
 
-.back-text-yellow {
-  position: absolute;
-  top: -90px;
-  left: 0;
-  right: 0;
-  font-size: 140px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--black-color);
-  opacity: 0.04;
-  z-index: 9;
-}
-
 .work-boxes {
-  border: 1px solid var(--black-color);
+  border: 1px solid var(--bg-black-color);
 }
 
 .work-boxes:hover,
 .work-boxes:hover h5 {
-  background-color: var(--black-color);
-  color: var(--white-color);
+  background-color: var(--bg-black-color);
+  color: var(--bg-black-color);
 }
 
 .work-title-border {
   height: 2px;
   width: 10px;
-  color: var(--black-color);
+  color: var(--bg-blue-color);
 }
 
 .work-boxes-icon {
@@ -678,7 +753,7 @@ h3 {
 /*-----------------------*/
 
 .blog-section {
-  background-color: var(--black-color);
+  background-color: var(--bg-yellow-color);
   padding: 70px 0;
 }
 
@@ -696,18 +771,18 @@ h3 {
 }
 
 .blog-section h2 {
-  color: var(--white-color);
+  color: var(--text-black);
 }
 
 .blog-section a {
-  color: var(--white-color);
+  color: var(--text-black);
   border-bottom: dotted 1px;
 }
 
 .blog-section a:hover {
   color: inherit;
   text-decoration: none;
-  border-bottom: 1px solid var(--white-color);
+  border-bottom: 1px solid var(--text-white);
 }
 
 .blog-wrapper {
@@ -741,7 +816,7 @@ h3 {
 /*-----------------------*/
 
 .contact-section {
-  background: var(--yellow-color);
+  background: var(--bg-blue-color);
   padding: 70px 0;
 }
 
@@ -752,6 +827,10 @@ h3 {
   font-weight: 600;
   position: relative;
   z-index: 99;
+}
+
+.fa {
+  color: var(--text-white);
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
@@ -786,7 +865,7 @@ h3 {
 /*-----------------------*/
 
 .footer-section {
-  padding: 100px 0 100px 0;
+  padding: 50px 0;
   background: #000;
 }
 

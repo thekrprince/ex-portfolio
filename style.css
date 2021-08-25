@@ -41,7 +41,7 @@ li {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--bg-black-color);
-  opacity: 0.05;
+  opacity: 0.15;
   z-index: 9;
 }
 
@@ -54,7 +54,7 @@ li {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--bg-blue-color);
-  opacity: 0.04;
+  opacity: 0.08;
   z-index: 9;
 }
 

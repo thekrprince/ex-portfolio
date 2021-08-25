@@ -198,7 +198,7 @@ li {
     scroll-behavior: smooth;
   }
   #nav-menu ul li a {
-    color: var(--bg-black-color);
+    color: var(--nav-color);
   }
   .navbar-nav {
     background: var(--bg-blue-color);
@@ -262,10 +262,6 @@ li {
   position: absolute;
   right: 10px;
   top: 15px;
-}
-
-.working-svg {
-  max-width: 80%;
 }
 
 /* Media Query Intro Section*/

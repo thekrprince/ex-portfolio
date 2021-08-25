@@ -57,10 +57,10 @@ particlesJS('particles-js', {
       },
     },
     color: {
-      value: '#000',
+      value: '#FD5956',
     },
     shape: {
-      type: 'circle',
+      type: 'star',
       stroke: {
         width: 0,
         color: '#000000',
@@ -97,8 +97,8 @@ particlesJS('particles-js', {
     line_linked: {
       enable: true,
       distance: 150,
-      color: '#ffffff',
-      opacity: 0.4,
+      color: '#D0FEFE',
+      opacity: 0.1,
       width: 1,
     },
     move: {

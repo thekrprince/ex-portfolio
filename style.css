@@ -240,13 +240,17 @@ p {
 
 .svg-image {
   width: 400px;
-  height: 400px;
   position: absolute;
   right: 10px;
   top: 15px;
 }
+
+.working-svg {
+  max-width: 80%;
+}
+
 /* Media Query Intro Section*/
-@media only screen and (min-width: 768px) and (max-width: 1280px) {
+@media only screen and (min-width: 768px) and (max-width: 1366px) {
   .intro-section {
     padding: 5vh 0;
     min-height: 100%;
@@ -479,10 +483,6 @@ p {
 
 .myintro span {
   color: var(--yellow-color);
-}
-
-.about-text p {
-  font-family: ;
 }
 
 /*-----------------------*/
